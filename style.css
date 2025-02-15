@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Основные стили */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fafafa;
@@ -7,8 +7,9 @@ body {
   color: #333;
 }
 
+/* Шапка */
 header {
-  background-color: #1c1c1c;
+  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
   color: white;
   padding: 40px 0;
   text-align: center;
@@ -37,18 +38,17 @@ nav ul li a {
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  border-bottom: 2px solid #3498db;
+  color: #3498db;
 }
 
-/* Основные секции */
-section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: 0 auto;
+/* Контактная информация */
+section#contact {
   text-align: center;
+  padding: 80px 20px;
 }
 
 h2 {
@@ -58,36 +58,90 @@ h2 {
   color: #1c1c1c;
 }
 
-p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 40px;
-}
-
-/* Стили секции "Проекты" */
-section#projects {
-  background-color: #f4f4f4;
-}
-
-.project {
-  background-color: white;
+/* Карточка контактов */
+.contact-card {
+  background: white;
   padding: 30px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  margin: 20px auto;
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project:hover {
+.contact-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
+.contact-card p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.contact-card a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-card a:hover {
+  color: #1c7ed6;
+}
+
+/* Социальные иконки */
+.social-icons {
+  margin-top: 40px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Футер */
 footer {
   background-color: #1c1c1c;
   color: white;
   padding: 20px 0;
   text-align: center;
+}
+
+/* Анимации */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
