@@ -1,68 +1,41 @@
-/* Основные стили */
+/* Общие стили */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fafafa;
   margin: 0;
   padding: 0;
   color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  background-attachment: fixed;
 }
 
 /* Шапка */
 header {
-  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
+  background: rgba(28, 28, 28, 0.8);
   color: white;
   padding: 40px 0;
   text-align: center;
+  backdrop-filter: blur(10px);
 }
 
-header h1 {
-  font-size: 3rem;
-  margin: 0;
-  font-weight: 600;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #3498db;
+/* Контейнер для центрирования контента */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 /* Контактная информация */
-section#contact {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #1c1c1c;
-}
-
-/* Карточка контактов */
 .contact-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   padding: 30px;
-  margin: 20px auto;
   width: 50%;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -72,22 +45,6 @@ h2 {
 .contact-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-}
-
-.contact-card p {
-  font-size: 1.2rem;
-  color: #555;
-  margin: 10px 0;
-}
-
-.contact-card a {
-  color: #3498db;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-card a:hover {
-  color: #1c7ed6;
 }
 
 /* Социальные иконки */
@@ -110,38 +67,13 @@ h2 {
   height: 40px;
 }
 
-/* Футер */
+/* Футер (перемещён в самый низ) */
 footer {
-  background-color: #1c1c1c;
+  background: rgba(28, 28, 28, 0.8);
   color: white;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
-}
-
-/* Анимации */
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-}
-
-.slide-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 1s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  backdrop-filter: blur(10px);
+  position: relative;
+  width: 100%;
 }
