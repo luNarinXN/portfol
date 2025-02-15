@@ -1,13 +1,13 @@
-/* Контакты */
+/* Контакты - Общие стили */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
-  min-height: 100vh;
+  background-color: #ffffff; /* Белый фон */
   display: flex;
   flex-direction: column;
-  background-color: #ffffff; /* Белый фон */
+  min-height: 100vh; /* Гарантирует, что футер всегда внизу */
 }
 
 /* Шапка */
@@ -16,6 +16,17 @@ header {
   color: white;
   padding: 40px 0;
   text-align: center;
+}
+
+/* Основной контент */
+main {
+  flex: 1; /* Заполняет пространство между хедером и футером */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
 }
 
 /* Контактная карточка */
@@ -59,6 +70,14 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
-  position: relative;
   width: 100%;
+  position: relative;
+  bottom: 0;
+}
+
+/* Надпись о правах */
+.copyright {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.7;
 }
