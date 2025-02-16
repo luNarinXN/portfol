@@ -1,63 +1,107 @@
-/* Стиль для страницы "Контакты" */
-.contacts-page {
+/* Общие стили */
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Шапка */
+header {
+  background: #1c1c1c;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Контактный блок */
+main {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-}
-
-.contact-info {
-  background: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 60px 20px;
 }
 
-.contact-info h2 {
-  font-size: 2rem;
+.contact-card {
+  background: #e0e0e0;
+  padding: 30px;
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
   margin-bottom: 15px;
 }
 
-.contact-info p {
-  font-size: 1.2rem;
-  margin: 10px 0;
+.contact-card p {
+  font-size: 1.1rem;
 }
 
+/* Соцсети */
 .social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .social-icons a {
   display: inline-block;
-  width: 40px;
-  height: 40px;
-  background: #1c1c1c;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
 }
 
 .social-icons a:hover {
-  background: #3498db;
+  transform: scale(1.2);
 }
 
+.social-icons img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Футер */
 footer {
-  background-color: #1c1c1c;
+  background: #1c1c1c;
   color: white;
-  padding: 20px 0;
+  padding: 20px;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.9rem;
 }
