@@ -1,83 +1,63 @@
-/* Контакты - Общие стили */
-body {
+/* Стиль для страницы "Контакты" */
+.contacts-page {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #ffffff;
   color: #333;
-  background-color: #ffffff; /* Белый фон */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Гарантирует, что футер всегда внизу */
-}
-
-/* Шапка */
-header {
-  background: #1c1c1c;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-/* Основной контент */
-main {
-  flex: 1; /* Заполняет пространство между хедером и футером */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+}
+
+.contact-info {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  padding: 60px 20px;
 }
 
-/* Контактная карточка */
-.contact-card {
-  background: #f8f8f8;
-  padding: 30px;
-  width: 50%;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-.contact-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
 }
 
-/* Социальные иконки */
 .social-icons {
-  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
 }
 
 .social-icons a {
   display: inline-block;
-  margin: 0 10px;
-  transition: transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  background: #1c1c1c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .social-icons a:hover {
-  transform: scale(1.2);
+  background: #3498db;
 }
 
-.social-icons img {
-  width: 40px;
-  height: 40px;
-}
-
-/* Футер */
 footer {
-  background: #1c1c1c;
+  background-color: #1c1c1c;
   color: white;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
-  width: 100%;
-  position: relative;
+  position: fixed;
   bottom: 0;
-}
-
-/* Надпись о правах*/
-.copyright {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  opacity: 0.7;
+  width: 100%;
 }
